@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Declaracion Accidente</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body align="center">
+        <header><h1>Declaración Amistosa de Accidente</h1></header>
+        <main>
+            <section>
+                <form action="." oninput="range_control_value.value = range_control.valueAsNumber">
+                    <label>Fecha del accidente: <input type="date" name="fecha_accidente"/></label>
+                    <label>Hora: <input type="time" name="hora_accidente"/> </label>
+                    <label>Localización (País): 
+
+                        <select name="pais_accidente">
+                            <option value="Espana">España</option>
+                            <option value="portugal">Portugal</option>
+                            <option value="alemania">Alemania</option>
+                            <option value="francia">Francia</option>
+                        </select>
+                    </label>
+                    <br/>
+                    <label>Víctima(s) incluso Leve(s):<br/>
+                        <input type="radio" name="victima" value="victima_si" > Si<br>
+                        <input type="radio" name="victima" value="victima_no"> No<br></label>
+                    <label><h3>daños materiales</h3></label>
+                    <label>Vehiculos distintos de A y B:<br/>
+                        <input type="radio" name="tercer-vehiculo_si" id="tercer-vehiculo_si" value="tercer-vehiculo_si" > Si<br>
+                        <input type="radio" name="tercer-vehiculo_no" id="tercer-vehiculo_no" value="tercer-vehiculo_no"> No<br></label>
+                    <label>Objetos distintos al vehiculo:<br/>
+                        <input type="radio" name="objetos-extra_si" id="objetos-extra_si" value="objetos-extra_si" > Si<br>
+                        <input type="radio" name="objetos-extra_no" id="objetos-extra_no" value="objetos-extra_no"> No<br></label>
+                    <hr>
+
+                    <table border ="1" align="center" width="80%">
+                        <tr>
+                            <th>Datos</th>
+                            <th>Vehículo A</th>
+                            <th>Vehículo B</th>
+                        </tr>
+                        <tr>
+                            <th><label id="nombre-asegurado">Nombre:</th>
+                            <td><input type="text" name="nombre-asegurado_a" id="nombre-asegurado_a" size="50"/></td>
+                            <td><input type="text" name="nombre-asegurado_b" id="nombre-asegurado_b" size="50"/></td></label>
+                        <tr>
+                            <th><label id="apellido-asegurado">Apellidos:</th>
+                            <td><input type="text" name="apellido-asegurado_a" id="apellido-asegurado_a" size="50"/></td>
+                            <td><input type="text" name="apellido-asegurado_b" id="apellido-asegurado_b" size="50"/></td></label>
+                        </tr>
+                        <tr>
+                            <th><label id="direccion-asegurado">Dirección:</th>
+                            <td><input type="text" name="direccion-asegurado_a" id="direccion-asegurado_a" size="50"/></td>
+                            <td><input type="text" name="direccion-asegurado_b" id="direccion-asegurado_b" size="50"/></td></label>
+                        </tr>
+                        <tr>
+                            <th><label id="postal-asegurado">Código Postal:</th>
+                            <td><input type="number" size="5" name="postal-asegurado_a" id="postal-asegurado_a" /></td>
+                            <td><input type="number" size="5" name="postal-asegurado_b" id="postal-asegurado_b"/></td></label>
+                        </tr>
+                        <tr>
+                            <th><label id="pais-asegurado">País</th>
+                            <td> <select name="pais-asegurado_a" >
+                                    <option value="Espana">España</option>
+                                    <option value="portugal">Portugal</option>
+                                    <option value="alemania">Alemania</option>
+                                    <option value="francia">Francia</option>
+                                </select></td>
+                            <td> <select name="pais-asegurado_b" >
+                                    <option value="Espana">España</option>
+                                    <option value="portugal">Portugal</option>
+                                    <option value="alemania">Alemania</option>
+                                    <option value="francia">Francia</option>
+                                </select></td></label>
+                        </tr>
+                        <tr>
+                        <label id="telefono-asegurado"> <th>Telefono</th>
+                            <td><input type="tel" name="contacto-asegurado_a" id="contacto-asegurado_a" size="50"/></td>
+                            <td><input type="tel" name="contacto-asegurado_b" id="contacto-asegurado_b" size="50"/></td></label>
+                        </tr>
+                        <tr>
+                        <label id="email-asegurado">  <th>E-mail</th>
+                            <td><input type="email" name="email-asegurado_a" id="email-asegurado_a" size="50"/></td>
+                            <td><input type="email" name="email-asegurado_b" id="email-asegurado_b" size="50"/></td></label>
+                        </tr>
+                        <tr> <th colspan="3"><label id="vehiculo">Vehículo a motor</label></th></tr>
+                        <tr>
+                        <label id="marca"><th>Marca</th>
+                            <td><select name="marca-modelo_a" id="marca-modelo_a">
+                                    <option value="op-null">Seleccione una opcion</option>
+                                    <option value="renault">Renault</option>
+                                    <option value="seat">Seat</option>
+                                    <option value="honda">Honda</option>
+                                    <option value="ferrari">Ferrari</option>
+                                </select></td>
+                            <td><select name="marca-modelo_b" id="marca-modelo_b">
+                                    <option value="op-null">Seleccione una opcion</option>
+                                    <option value="renault">Renault</option>
+                                    <option value="seat">Seat</option>
+                                    <option value="honda">Honda</option>
+                                    <option value="ferrari">Ferrari</option>
+                                </select></td></label>
+                        </tr>
+                        <tr>
+                        <label id="matricula-bastidor">  <th>Matricula o Bastidor:</th>
+                            <td><input type="text" name="matricula-bastidor-vehiculo_a" id="matricula-bastidor-vehiculo_a" size="50"/></td>
+                            <td><input type="text" name="matricula-bastidor-vehiculo_b" id="matricula-bastidor-vehiculo_b" size="50"/></td></label>
+                        </tr>
+                        <tr>
+                        <label id="pais-matricula-vehiculo">  <th>País de Matrícula:</th>
+                            <td><input type="text" name="pais-matricula-vehiculo_a" id="pais-matricula-vehiculo_a" size="50"/></td>
+                            <td><input type="text" name="pais-matricula-vehiculo_b" id="pais-matricula-vehiculo_b" size="50"/></td></label>
+                        </tr>
+
+                        <tr> <th colspan="3"><label id="remolque">Remolque</label></th></tr>
+                        <tr>
+                        <label id="matricula-bastidor">  <th>Matricula o Bastidor:</th>
+                            <td><input type="text" name="matricula-bastidor-remoque_a" id="matricula-bastidor-remoque_a" size="50"/></td>
+                            <td><input type="text" name="matricula-bastidor-remoque_b" id="matricula-bastidor-remoque_b" size="50"/></td></label>
+                        </tr>
+                        <tr>
+                        <label id="pais-matricula-remoque">  <th>País de Matrícula:</th>
+                            <td><input type="text" name="pais-matricula-remoque_a" id="pais-matricula-remoque_a" size="50"/></td>
+                            <td><input type="text" name="pais-matricula-remoque_b" id="pais-matricula-remoque_b" size="50"/></td></label>
+                        </tr>
+
+                        <tr> <th colspan="3"><label id="aseguradora">Aseguradora</label></th></tr>
+
+                        <label id="nombre-aseguradora">  <th>Nombre:</th>
+                            <td><input type="text" name="nombre-aseguradora_a" id="nombre-aseguradora_a" size="50"/></td>
+                            <td><input type="text" name="nombre-aseguradora_b" id="nombre-aseguradora_b" size="50"/></td></label>
+                        </tr>
+
+                        <label id="poliza">  <th>Nº de Poliza:</th>
+                            <td><input type="text" name="poliza_a" id="poliza_a" size="50"/></td>
+                            <td><input type="text" name="poliza_b" id="poliza_b" size="50"/></td></label>
+                        </tr>
+
+                        <label id="carta-verde">  <th>Nº de Carta Verde:</th>
+                            <td><input type="text" name="carta-verde_a" id="carta-verde" size="50"/></td>
+                            <td><input type="text" name="carta-verde_b" id="carta-verde_b" size="50"/></td></label>
+                        </tr>
+
+                        <label id="carta-verde-valida">  <th>Certificado o Carta Verde Válida:</th>
+                            <td>
+                                <label>Desde:</label><input type="date" name="carta-verde-valida-desde_a" id="carta-verde-valida-desde_a"/><br>
+                                <label>Hasta:</label><input type="date" name="carta-verde-valida-hasta_a" id="carta-verde-valida-hasta_a"/>
+                            </td>
+                            <td>
+                                <label>Desde:</label><input type="date" name="carta-verde-valida-desde_b" id="carta-verde-valida-desde_b"/><br>
+                                <label>Hasta:</label><input type="date" name="carta-verde-valida-hasta_b" id="carta-verde-valida-hasta_b"/>
+                            </td>
+                            </tr>
+
+                            <label id="nombre-aseguradora">  <th>Nombre:</th>
+                                <td><input type="text" name="nombre-aseguradora_a" id="nombre-aseguradora_a" size="50"/></td>
+                                <td><input type="text" name="nombre-aseguradora_b" id="nombre-aseguradora_b" size="50"/></td></label>
+                            </tr>
+
+                            <label id="direccion-aseguradora">  <th>Dirección:</th>
+                                <td><input type="text" name="direccion-aseguradora_a" id="direccion-aseguradora_a" size="50"/></td>
+                                <td><input type="text" name="direccion-aseguradora_b" id="direccion-aseguradora_b" size="50"/></td></label>
+                            </tr>
+
+                            <label id="pais-aseguradora">  <th>Pais:</th>
+                                <td><input type="text" name="pais-aseguradora_a" id="pais-aseguradora_a" size="50"/></td>
+                                <td><input type="text" name="pais-aseguradora_b" id="pais-aseguradora_b" size="50"/></td></label>
+                            </tr>
+
+                            <label id="tel-aseguradora">  <th>Telefono:</th>
+                                <td><input type="tel" name="tel-aseguradora_a" id="tel-aseguradora_a" size="50"/></td>
+                                <td><input type="tel" name="tel-aseguradora_b" id="tel-aseguradora_b" size="50"/></td></label>
+                            </tr>
+
+                            <label id="email-aseguradora">  <th>Email:</th>
+                                <td><input type="email" name="email-aseguradora_a" id="email-aseguradora_a" size="50"/></td>
+                                <td><input type="email" name="email-aseguradora_b" id="email-aseguradora_b" size="50"/></td></label>
+                            </tr>
+
+                            <label id="daños-incluidos">  <th><i>¿Los daños propios del vehículo están asegurados?</i></th>
+                                <td><input type="radio" name="daños-incluidos_a" value="si"> Si
+                                    <input type="radio" name="daños-incluidos_a" value="no"> No </td>
+                                <td><input type="radio" name="daños-incluidos_b" value="si"> Si
+                                    <input type="radio" name="daños-incluidos_b" value="no"> No </td>
+                            </label>
+                            </tr>
+
+                            <label id="matricula-bastidor">  <th>Matricula o Bastidor:</th>
+                                <td><input type="text" name="matricula-bastidor-remoque_a" id="matricula-bastidor-remoque_a" size="50"/></td>
+                                <td><input type="text" name="matricula-bastidor-remoque_b" id="matricula-bastidor-remoque_b" size="50"/></td></label>
+                            </tr>
+
+                            <tr>
+                                <th><label id="nombre-conductor">Nombre:</th>
+                                <td><input type="text" name="nombre-conductor_a" id="nombre-conductor_a" size="50"/></td>
+                                <td><input type="text" name="nombre-conductor_b" id="nombre-conductor_b" size="50"/></td></label>
+                        <tr>
+                            <th><label id="apellido-conductor">Apellidos:</th>
+                            <td><input type="text" name="apellido-conductor_a" id="apellido-conductor_a" size="50"/></td>
+                            <td><input type="text" name="apellido-conductor_b" id="apellido-conductor_b" size="50"/></td></label>
+                        </tr>
+                        <tr>
+                            <th><label id="fecha-nacimiento-conductor">Fecha de Nacimiento:</th>
+                            <td><input type="date" name="fecha-nacimiento-conductor_a" id="fecha-nacimiento-conductor_a" /></td>
+                            <td><input type="date" name="fecha-nacimiento-conductor_b" id="fecha-nacimiento-conductor_b"/></td></label>
+                        </tr>
+                        <tr>
+                            <th><label id="direccion-conductor">Dirección:</th>
+                            <td><input type="text" name="direccion-conductor_a" id="direccion-conductor_a" size="50"/></td>
+                            <td><input type="text" name="direccion-conductor_b" id="direccion-conductor_b" size="50"/></td></label>
+                        </tr>
+
+                        <tr>
+                            <th><label id="pais-conductor">País</th>
+                            <td> <select name="pais-conductor_a" >
+                                    <option value="Espana">España</option>
+                                    <option value="portugal">Portugal</option>
+                                    <option value="alemania">Alemania</option>
+                                    <option value="francia">Francia</option>
+                                </select></td>
+                            <td> <select name="pais-conductor_b" >
+                                    <option value="Espana">España</option>
+                                    <option value="portugal">Portugal</option>
+                                    <option value="alemania">Alemania</option>
+                                    <option value="francia">Francia</option>
+                                </select></td></label>
+                        </tr>
+                        <tr>
+                        <label id="telefono-conductor"> <th>Telefono</th>
+                            <td><input type="tel" name="telefono-conductor_a" id="telefono-conductor_a" size="50"/></td>
+                            <td><input type="tel" name="telefono-conductor_b" id="telefono-conductor_b" size="50"/></td></label>
+                        </tr>
+                        <tr>
+                        <label id="email-conductor">  <th>E-mail</th>
+                            <td><input type="email" name="email-conductor_a" id="email-conductor_a" size="50"/></td>
+                            <td><input type="email" name="email-conductor_b" id="email-conductor_b" size="50"/></td></label>
+                        </tr>
+
+                        <tr>
+                            <th><label id="permiso-conducir-conductor">Permiso de conducir nº:</th>
+                            <td><input type="text" name="permiso-conducir-conductor_a" id="permiso-conducir-conductor_a" size="50"/></td>
+                            <td><input type="text" name="permiso-conducir-conductor_b" id="permiso-conducir-conductor_b" size="50"/></td></label>
+                        </tr>
+
+                        <tr>
+                            <th><label id="categoria-permiso-conductor">Categoría (A,B...):</th>
+                            <td><input type="text" name="categoria-permiso-conductor_a" id="categoria-permiso-conductor_a" size="50"/></td>
+                            <td><input type="text" name="categoria-permiso-conductor_b" id="categoria-permiso-conductor_b" size="50"/></td></label>
+                        </tr>
+
+                        <tr>
+                            <th><label id="permiso-valido-conductor">Permiso Válido Hasta:</th>
+                            <td><input type="date" name="permiso-valido-conductor_a" id="permiso-valido-conductor_a" /></td>
+                            <td><input type="date" name="permiso-valido-conductor_b" id="permiso-valido-conductor_b"/></td></label>
+                        </tr>
+
+
+                        <tr>
+                            <th><label id="daños-vehiculo">Daños Apreciados:</th>
+                            <td><textarea name="daños-vehiculo_a" id="daños-vehiculo_a"  style="width:300px; height:100px"></textarea></td>
+                            <td><textarea name="daños-vehiculo_b" id="daños-vehiculo_b"  style="width:300px; height:100px"></textarea></td>
+                        </tr>
+
+                        <tr>
+                            <th><label id="observaciones">Observaciones:</th>
+                            <td><textarea name="observaciones_a" id="observaciones_a"  style="width:300px; height:100px"></textarea></td>
+                            <td><textarea name="observaciones_b" id="observaciones_b"  style="width:300px; height:100px"></textarea></td>
+                        </tr>
+                    </table>
+                    <br> <hr>
+
+                    <label align="center"><input type="submit" value="Submit!" /></label>
+                </form> 
+            </section>
+        </main>
+        <footer></footer>
+    </body>
+</html>

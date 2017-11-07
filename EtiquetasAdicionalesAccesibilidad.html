@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Etiquetas adicionales y accesibilidad</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <section>
+            <h1> Etiquetas adicionales </h1>
+            En HTML5 se han definido o redefinido algunas etiquetas interesantes, que 
+            pueden ser muy útiles para representar información de manera que sea accesible
+            para personas discapacitadas y sistemas.
+            <article>
+                <h2>TIME</h2>
+                La etiqueta time permite especificar tanto fechas, como horas e instantes en el tiempo.
+
+                Algunos ejemplos de uso de dicha etiqueta son:
+
+                <!-- month -->
+                Un mes concreto:<time >2015-11</time>
+
+                <!-- date -->
+                Una fecha: <time>2015-11-12</time>
+
+                <!-- yearless date -->
+                Una fecha en un año cualquiera: <time>11-12</time>
+
+                <!-- time -->
+                Una hora: <time>14:54:39</time>
+
+                <!-- floating date and time -->
+                Un instante en el tiempo: <time>2015-11-12T14:54:39</time>
+
+                <!-- time-zone offset -->
+                La definición de un offset de zona:<time>-0800</time>
+
+                <!-- global date and time -->
+                Un instante en el tiempo global (con su offset):<time>2015-11-12T06:54:39.929-0800</time>
+
+                <!-- week -->
+                Una semana concreata de un año: <time>2015-W46</time>
+
+                <!-- duration -->
+                Una duración:<time>4h 18m 3s</time>
+            </article>
+            <article>
+                <h2>Etiquetas sobre el progreso de un proceso o accción</h2>
+                <p>El progress se usa para describir el estado actual de un proceso
+                    de cambio que se completará.</p>
+                <p>El elemento del meter representa un elemento cuyo rango es conocido,
+                    lo que significa que tiene valores mínimo y máximo definidos,
+                    con rangos de valores asociados a niveles bajos y altos. Ejemplos:
+                    uso del disco duro, o una fracción de una población con derecho a voto;
+                    ambos tienen un valor máximo definido</p>
+
+                Ejemplos: <h3>Su tarea está en prograso</h3>
+                <p>Estado: <progress max="100" value="10"><span>10</span>% </progress></p>
+                <p>Uso total de disco: <meter value="160" min="0" max="320" 
+                                              low="100" high="300" title="gigabytes">3 GB</meter></p>
+            </article>
+            <article>
+                <h2> Etiqutas para glosarios y definiciones</h2>
+                El elemento dl (lista de definiciones), junto con sus hijos asociados
+                dt (term) y dd (descripción), se ha redefinido en la especificación HTML5.
+                En HTML5, estas listas ya no se llaman "listas de definición"; ahora
+                son las "listas de descripción" o "listas de asociación" que suenan más genéricas.
+                Deben usarse para marcar cualquier tipo de pares nombre-valor, incluidos términos y definiciones,
+                temas y valores de metadatos, y preguntas y respuestas.
+
+                <dl>
+                    <dt> Selector: </dt>
+                    <dd> El elemento (s) objetivo. </dd>
+                    <dt> Propiedad: </dt>
+                    <dd> La característica utilizada para agregar estilo al elemento objetivo,
+                        definido antes de dos puntos. </dd>
+                    <dt> Valor: </dt>
+                    <dd> El valor dado a la propiedad especificada, declarada después del
+                        simbolo de dos puntos. </dd>
+                </dl>
+            </article>
+        </section>
+        <section>
+            <h1>Accesibilidad. WCAG y WAI-ARIA</h1>
+             Eesde 2011, el W3C ha hecho grandes progresos para facilitar a los
+             autores la escritura de páginas web más accesibles.
+             <article>
+             <h2>WCAG</h2>
+             WCAG existe para proporcionar: "Un único estándar compartido para el
+             acceso a contenido web que satisfaga las necesidades de individuos,
+             organizaciones y gobiernos a nivel internacional".
+             
+             <p>Cuando se trata de crear páginas web normales (a diferencia de las
+                 aplicaciones web de una sola página y similares) tiene sentido concentrarse
+                 en las directrices de WCAG. Ofrecen una serie de pautas (en su 
+                 mayoría de sentido común) sobre cómo garantizar que se pueda acceder
+                 a su contenido web. Cada recomendación se clasifica como un nivel de
+                 conformidad: A, AA o AAA. Para obtener más información sobre estos
+                 niveles de conformidad, consulte http://www.w3.org/TR/UNDERSTANDING-WCAG20/conformance.html#uc-levels-head.</p>
+
+             <p>Probablemente descubrirá que ya está siguiendo a muchas de las directrices,
+                 como proporcionar texto alternativo para imágenes, por ejemplo. Sin embargo,
+                 puede obtener un breve resumen de las pautas en http://www.w3.org/WAI/WCAG20/glance/Overview.html
+                 y luego crear su propia lista de verificaciones de referencia rápida 
+                 personalizada en http://www.w3.org/WAI/WCAG20/quickref/.</p>
+
+             <p> Yo os Animaría a todos a pasar una o dos horas mirando la lista. Muchas de
+                 las pautas son simples de implementar y ofrecen beneficios reales a los usuarios</p>
+             </article>
+             
+             <article>
+                 <h2>WAI-ARIA</h2>
+                 El objetivo de WAI-ARIA es principalmente resolver el problema de
+                 hacer que el contenido dinámico en una página web sea accesible.
+                 Proporciona un medio para describir roles, estados y propiedades
+                 para widgets personalizados (secciones dinámicas en aplicaciones web)
+                 para que sean reconocibles y utilizables por los usuarios de
+                 tecnología de asistencia.
+                 
+                 <p>Por ejemplo, si un widget en pantalla muestra el precio de las acciones de una
+                     compañia que se actualiza constantemente, ¿cómo lo sabría un usuario ciego al acceder a la página?
+                     WAI-ARIA intenta resolver estos mismos problemas.</p>
+                 
+                 <p>Lo más fácil que puede hacer para ayudar a las tecnologías de asistencia es utilizar los elementos correctos cuando sea posible.
+                 Un elemento de encabezado va a ser mucho más útil que div class = "Header".
+                 De manera similar, si tiene un botón en su página, use el elemento button (en lugar de un enlace u otro elemento diseñado para 
+                 que parezca un botón). </p>
+                 
+                 <p> ARIA define una serie de roles de referencias que ayudan a los sistemas
+                     de tecnología asisitiva a simular la experiencia para sus usuarios.
+                 Se encuentra disponible una lista completa de los roles y una descripción 
+                 sucinta de su idoneidad de uso en http://www.w3.org/TR/wai-aria/roles.</p>
+                 
+             </article>
+             
+        </section>
+    </body>
+</html>
